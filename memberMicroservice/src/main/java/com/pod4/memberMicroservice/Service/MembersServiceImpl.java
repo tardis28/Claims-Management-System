@@ -52,7 +52,7 @@ public class MembersServiceImpl implements MembersService {
 	}
 
 	@Override
-	public MemberSubmitClaim saveClaim(MemberSubmitClaim memberSubmitClaim) {
+	public MemberClaim saveClaim(MemberClaim memberSubmitClaim) {
 		return this.memberSubmitClaimRepo.save(memberSubmitClaim);
 	}
 
