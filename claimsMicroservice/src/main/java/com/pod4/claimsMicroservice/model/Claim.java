@@ -1,4 +1,4 @@
-package com.pod4.claimsMicroservice.Model;
+package com.pod4.claimsMicroservice.model;
 
 public class Claim {
 
