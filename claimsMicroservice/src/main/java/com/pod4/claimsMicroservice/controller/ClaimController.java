@@ -43,6 +43,7 @@ public class ClaimController {
 		claimStatusResult.setMemberId(newclaimClaimStatus.getMemberId());
 		claimStatusResult.setClaimStatus(newclaimClaimStatus.getClaimStatus());
 		claimStatusResult.setClaimDesc(newclaimClaimStatus.getStatusDes());
+		int val=0;
 		return claimStatusResult;
 	}
 
