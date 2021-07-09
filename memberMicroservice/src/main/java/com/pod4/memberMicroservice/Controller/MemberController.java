@@ -25,7 +25,7 @@ import org.springframework.web.client.RestTemplate;
 import com.pod4.memberMicroservice.Model.*;
 
 import com.pod4.memberMicroservice.Exception.TokenValidationFailedException;
-import com.pod4.memberMicroservice.Repository.MembersPolicyRepository;
+import com.pod4.memberMicroservice.Repository.MembersPolicyRepo;
 import com.pod4.memberMicroservice.Service.MembersService;
 
 @RestController
@@ -35,7 +35,7 @@ public class MemberController {
 	private MembersService membersService;
 
 	@Autowired
-	private MembersPolicyRepository membersPolicyRepository;
+	private MembersPolicyRepo membersPolicyRepository;
 
 	@Autowired
 	private RestTemplate restTemp;
@@ -54,7 +54,7 @@ public class MemberController {
 	}
 
 	@PostMapping("/submitclaim")
-	public MemberSubmitClaim submitClaim(@RequestBody MemberSubmitClaim memberSubmitClaim) {
+	public MemberClaim submitClaim(@RequestBody MemberClaim memberSubmitClaim) {
 		return this.membersService.saveClaim(memberSubmitClaim);
 
 	}

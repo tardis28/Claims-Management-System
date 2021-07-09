@@ -10,6 +10,6 @@ public interface MembersService {
 	Members getMemberByid(long id) throws Exception;
 	MemberPolicy saveMemberPolicy(MemberPolicy memberPolicy);
 	List<MemberPolicy> ViewBill(long membId,long policyId);
-	MemberSubmitClaim saveClaim(MemberSubmitClaim memberSubmitClaim);
+	MemberClaim saveClaim(MemberClaim memberSubmitClaim);
 
 }
