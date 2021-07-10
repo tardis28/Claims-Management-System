@@ -118,7 +118,7 @@ public class MemberPortalController {
 		ResponseEntity<UserToken> response = null;
 
 		try {
-			response = restTemp.postForEntity("http://authorizationservice/api/auth/login", creds, UserToken.class);
+			response = restTemp.postForEntity("http://authorizationMicroservice/api/auth/login", creds, UserToken.class);
 		} catch (Exception e) {
 			log.error("Invalid credentials");
 			return "redirect:/login-retry";
@@ -215,7 +215,7 @@ public class MemberPortalController {
 			headers.set("Authorization", token);
 			HttpEntity<Boolean> requestEntity = new HttpEntity<>(null, headers);
 			ResponseEntity<ViewBillResponse[]> response = restTemp.exchange(
-					"http://memberservice/viewbill/" + memberId + "/" + policyId, HttpMethod.GET, requestEntity,
+					"http://memberMicroservice/viewbill/" + memberId + "/" + policyId, HttpMethod.GET, requestEntity,
 					ViewBillResponse[].class);
 
 			ViewBillResponse[] res = response.getBody();
@@ -239,7 +239,7 @@ public class MemberPortalController {
 				model.addAttribute("title", "View Bills");
 
 				ResponseEntity<ClaimStatusResult> response = restTemp.getForEntity(
-						"http://claimservice/getClaimStatus/" + claimId + "/" + policyId + "/" + memberId,
+						"http://claimMicroservice/getClaimStatus/" + claimId + "/" + policyId + "/" + memberId,
 						ClaimStatusResult.class);
 				ClaimStatusResult res = response.getBody();
 				model.addAttribute("claimRes", res);
@@ -262,7 +262,7 @@ public class MemberPortalController {
 		if (valid == "True") {
 			try {
 				ResponseEntity<ProviderResult> response = restTemp
-						.getForEntity("http://policyservice/getChainOfProviders/" + policyId, ProviderResult.class);
+						.getForEntity("http://policyMicroservice/getChainOfProviders/" + policyId, ProviderResult.class);
 				ProviderResult res = response.getBody();
 				model.addAttribute("detailRes", res);
 				return "showProviderResult";

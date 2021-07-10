@@ -16,7 +16,8 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.pod4.authorizationMicroservice.Service.*;
+import com.pod4.authorizationMicroservice.Service.CustomerDetailsService;
+import com.pod4.authorizationMicroservice.Service.JwtRequestFilter;
 
 import lombok.extern.slf4j.Slf4j;
 

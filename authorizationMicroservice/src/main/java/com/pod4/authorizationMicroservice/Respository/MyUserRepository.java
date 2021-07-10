@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.pod4.authorizationMicroservice.Model.MyUser;
 
 @Repository
-public interface UserRepository extends JpaRepository<MyUser, String> {
+public interface MyUserRepository extends JpaRepository<MyUser, String> {
 
 	
 }

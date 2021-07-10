@@ -15,7 +15,7 @@ public class MemberPortalServiceImpl implements MemberPortalService{
 	private PortalRepo repo;
 	
 	
-	private static final String SUBMIT_CLAIM_API = "http://memberservice/submitclaim";
+	private static final String SUBMIT_CLAIM_API = "http://memberMicroservice/submitclaim";
 	
 	@Autowired
 	private RestTemplate restTemp;

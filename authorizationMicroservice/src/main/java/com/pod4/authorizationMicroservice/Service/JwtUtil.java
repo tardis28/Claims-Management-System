@@ -23,7 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Service
-public class JwtUtility {
+public class JwtUtil {
 
 	private String secretkey = "sampletest";
 

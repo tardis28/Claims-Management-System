@@ -14,7 +14,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "member_submit_claim")
+@Table(name = "member_claim")
 public class MemberSubmitClaim {
 	
 	@Id

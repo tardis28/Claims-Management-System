@@ -25,7 +25,7 @@ public class AuthServiceImpl implements AuthService {
 			
 			HttpEntity<Boolean> requestEntity = new HttpEntity<>(null, headers);
 			
-			ResponseEntity<String> result = restTemp.exchange("http://authorizationservice/api/auth/validate", HttpMethod.GET, requestEntity, String.class); 
+			ResponseEntity<String> result = restTemp.exchange("http://authorizationMicroservice/api/auth/validate", HttpMethod.GET, requestEntity, String.class); 
 			System.out.println(result.getBody());
 			if(result.getBody().equals("True")) {
 				return "True";

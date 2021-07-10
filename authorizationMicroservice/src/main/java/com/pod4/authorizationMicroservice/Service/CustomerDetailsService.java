@@ -2,7 +2,6 @@ package com.pod4.authorizationMicroservice.Service;
 
 import java.util.ArrayList;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.pod4.authorizationMicroservice.Exception.UserNotFoundException;
 import com.pod4.authorizationMicroservice.Model.MyUser;
-import com.pod4.authorizationMicroservice.Respository.*;
+import com.pod4.authorizationMicroservice.Respository.MyUserRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -26,7 +25,7 @@ import lombok.extern.slf4j.Slf4j;
 public class CustomerDetailsService implements UserDetailsService {
 
 	@Autowired
-	private UserRepository userdao;
+	private MyUserRepository userdao;
 
 	@Override
 	public UserDetails loadUserByUsername(String uid) throws UsernameNotFoundException {

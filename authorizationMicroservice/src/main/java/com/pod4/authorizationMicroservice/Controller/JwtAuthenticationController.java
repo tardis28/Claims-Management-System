@@ -14,9 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pod4.authorizationMicroservice.Model.*;
-import com.pod4.authorizationMicroservice.Respository.*;
-import com.pod4.authorizationMicroservice.Service.*;
+import com.pod4.authorizationMicroservice.Model.JwtResponse;
+import com.pod4.authorizationMicroservice.Model.UserLoginCredential;
+import com.pod4.authorizationMicroservice.Model.UserToken;
+import com.pod4.authorizationMicroservice.Respository.MyUserRepository;
+import com.pod4.authorizationMicroservice.Service.CustomerDetailsService;
+import com.pod4.authorizationMicroservice.Service.JwtUtil;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -29,13 +32,13 @@ import lombok.extern.slf4j.Slf4j;
 public class JwtAuthenticationController {
 
 	@Autowired
-	private JwtUtility jwtutil;
+	private JwtUtil jwtutil;
 
 	@Autowired
 	private CustomerDetailsService custdetailservice;
 
 	@Autowired
-	private UserRepository userservice;
+	private MyUserRepository userservice;
 
 	@Autowired
 	private AuthenticationManager authenticationManager;

@@ -29,7 +29,7 @@ import lombok.extern.slf4j.Slf4j;
 public class JwtRequestFilter extends OncePerRequestFilter {
 
 	@Autowired
-	private JwtUtility jwtUtil;
+	private JwtUtil jwtUtil;
 
 	@Autowired
 	private CustomerDetailsService custDetailsService;
