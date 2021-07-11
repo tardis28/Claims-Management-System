@@ -23,18 +23,18 @@
 	<div class="panel-group">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h4 class="panel-title btn btn-warning">
-					<a data-toggle="collapse" href="#collapse1">Menu</a>
+				<h4 class="panel-title btn btn-danger">
+					<a data-toggle="collapse" href="#collapse1" class="text-white font-weight-bold">Menu</a>
 				</h4>
 			</div>
 			<div id="collapse1" class="panel-collapse collapse"
 				style="margin-left: 30px">
 				<div class="nav-item">
-					<a class="nav-link active" aria-current="page"
+					<a class="nav-link active font-weight-bold" aria-current="page"
 						th:href="@{/memberHome}">Home</a>
 				</div>
 				<div class="nav-item">
-					<a class="nav-link " th:href="@{/logout}" href="#" tabindex="-1"
+					<a class="nav-link font-weight-bold" th:href="@{/logout}" href="#" tabindex="-1"
 						aria-disabled="true">Logout</a>
 				</div>
 			</div>
@@ -42,48 +42,46 @@
 	</div>
 
 
+
 	<div class="container">
-
-
-		<div class="sub-container">
 
 			<div class="row justify-content-center ">
 
-				<div class="mt-5">
-					<a class="btn btn-success " th:href="@{/showClaimPage}"
-						role="button" aria-current="page"> <img src="img/icon.png"
-						style="width: 200px; height: 200px;">
-						<p class="mt-5">Submit Claim</p>
+				<div class="ml-5 mt-2">
+					<a class="btn btn-danger " th:href="@{/showClaimPage}"
+						role="button" aria-current="page"> <img src="img/icon.jpg"
+						style="width: 250px; height: 200px;">
+						<p class="mt-2 mb-2 font-weight-bold">Submit Claim</p>
 					</a>
 				</div>
-				<div class="ml-5 mt-5">
-					<a class="btn btn-primary" th:href="@{/showClaimSubmit}"
+				<div class="ml-5 mt-2">
+					<a class="btn btn-danger" th:href="@{/showClaimSubmit}"
 						role="button" aria-current="page"> <img
-						src="img/icon2.png.jpg" style="width: 200px; height: 200px;">
-						<p class="mt-5">View Claim Status</p>
+						src="img/icon2.jpg" style="width: 250px; height: 200px;">
+						<p class="mt-2 mb-2 font-weight-bold">View Claim Status</p>
 					</a>
 				</div>
-				>
-
+				</div>
+				<div class="row justify-content-center ">
 				<div class="ml-5 mt-5">
-					<a class="btn btn-success" th:href="@{/showViewBillPage}"
+					<a class="btn btn-danger" th:href="@{/showViewBillPage}"
 						role="button" aria-current="page"> <img src="img/icon3.jpg"
-						style="width: 200px; height: 200px;">
-						<p class="mt-5">View Bill Details</p>
+						style="width: 250px; height: 200px;">
+						<p class="mt-2 mb-2 font-weight-bold">View Bill Details</p>
 					</a>
 				</div>
 
 				<div class="ml-5 mt-5">
-					<a class="btn btn-primary" th:href="@{/showProviderPolicySubmit}"
-						role="button" aria-current="page"> <img src="img/icon4.jpg"
-						style="width: 200px; height: 200px;">
-						<p class="mt-5">Policy Provider Details</p>
+					<a class="btn btn-danger" th:href="@{/showProviderPolicySubmit}"
+						role="button" aria-current="page"> <img src="img/icon4.png"
+						style="width: 250px; height: 200px;">
+						<p class="mt-2 mb-2 font-weight-bold">Policy Provider Details</p>
 					</a>
 				</div>
 
 
 			</div>
-		</div>
+		
 	</div>
 
 

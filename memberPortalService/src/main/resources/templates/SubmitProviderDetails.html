@@ -19,30 +19,31 @@
 	<div class="panel-group">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h4 class="panel-title btn btn-warning">
-					<a data-toggle="collapse" href="#collapse1">Menu</a>
+				<h4 class="panel-title btn btn-danger">
+					<a data-toggle="collapse" href="#collapse1" class="text-white font-weight-bold">Menu</a>
 				</h4>
 			</div>
 			<div id="collapse1" class="panel-collapse collapse"
 				style="margin-left: 30px">
 				<div class="nav-item">
-					<a class="nav-link active" aria-current="page"
+					<a class="nav-link active font-weight-bold" aria-current="page"
 						th:href="@{/memberHome}">Home</a>
 				</div>
 				<div class="nav-item">
-					<a class="nav-link " th:href="@{/logout}" href="#" tabindex="-1"
+					<a class="nav-link font-weight-bold" th:href="@{/logout}" href="#" tabindex="-1"
 						aria-disabled="true">Logout</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container" style="margin-left:35%; margin-top:8%">
+	<div class="container" style="margin-left:auto; margin-right:auto; width:40%">
 
 		<form action="/viewProviderDetails" method="POST">
+		<label class="form-label mb-4" style="color:white">Policy ID</label>
 			<input type="text" id="member" name="policyId"
-				placeholder="Enter Policy ID" class="form-control mb-4 col-4" required/> 
+				placeholder="Enter Policy ID" class="form-control mb-4" required/> 
 
-			<button style="margin-left:12%" type="submit" class="btn btn-success col-1">Submit</button>
+			<button  type="submit" class="btn btn-danger">Submit</button>
 		</form>
 
 		
